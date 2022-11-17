@@ -1,14 +1,14 @@
 package otdeli;
 
 public class Department {
-    public int idEmployee;
-    public String nameOfDepartment;
-    public int amountOfWorkers;
+    public int idEmployee;                      //Ай ди работкника
+    public String nameOfDepartment;             //Название департамента
+    public int amountOfWorkers;                 //Колво работников
 
-    public double coefficientOfEfficiency;
-    public double salary;
+    public double coefficientOfEfficiency;      //Коэффицент эфективности
+    public double salary;                       //Зарплата
 
-    public double countSalary() {
+    public double countSalary() {                   //Вычисление зарплаты
         if(coefficientOfEfficiency > 1.0) {
             salary = salary * 2;
         }
