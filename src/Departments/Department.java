@@ -1,4 +1,4 @@
-package otdeli;
+package Departments;
 
 public class Department {
     public int idEmployee;                      //Ай ди работкника
@@ -9,10 +9,9 @@ public class Department {
     public double salary;                       //Зарплата
 
     public double countSalary() {                   //Вычисление зарплаты
-        if(coefficientOfEfficiency > 1.0) {
+        if (coefficientOfEfficiency > 1.0) {
             salary = salary * 2;
-        }
-        else if(coefficientOfEfficiency < 1.0) {
+        } else if (coefficientOfEfficiency < 1.0) {
             salary = salary * 0.8;
         }
 

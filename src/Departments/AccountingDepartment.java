@@ -1,34 +1,31 @@
-package otdeli;
+package Departments;
 
-class AccountingDepartment extends HumanResourcesDepartment {
+public class AccountingDepartment extends HumanResourcesDepartment {
     int prize = 0;
     int penalty = 1000;
     boolean hasPenalty = true;
 
-    double schitaemZarplatu() {
+    public void calculateSalary() {
         countSalary();
-        proveritShtrafi();
+        checkPenalty();
 
-        if (hasPenalty == true) {
+        if (hasPenalty) {
             salary = salary - penalty;
-        }
-        else {
+        } else {
             salary = salary + prize;
         }
 
-        return salary;
     }
 
-    private void proveritShtrafi() {
+    private void checkPenalty() {
         if (coefficientOfEfficiency > 1.0) {
             prize = 500;
-        }
-        else if (coefficientOfEfficiency ==1.0) {
+            hasPenalty = false;
+        } else if (coefficientOfEfficiency == 1.0) {
             prize = 0;
             penalty = 0;
             hasPenalty = false;
-        }
-        else {
+        } else {
             prize = 0;
             penalty = 1000;
             hasPenalty = true;
